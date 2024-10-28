@@ -1,5 +1,5 @@
 import ImageCard from "../ImageCard/ImageCard";
-import style from "../ImageGallery/ImageGallery.module.css";
+import style from "./ImageGallery.module.css";
 
 const ImageGallery = ({ images, onImageClick }) => {
   return (
