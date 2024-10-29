@@ -19,17 +19,20 @@ function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false); 
   const [selectedImage, setSelectedImage] = useState(null); 
 
+
   const onSearch = (searchTerm) => {
     setSearchValue(searchTerm);
     setPage(1); 
     setImages([]); 
   };
 
+
   const fetchImages = async (searchQuery, pageNum) => {
     if (!searchQuery) return; 
     try {
       setIsLoading(true);
       setIsError(false);
+
 
       const url = searchQuery
         ? 'https://api.unsplash.com/search/photos'
@@ -87,7 +90,6 @@ function App() {
         <LoadMoreBtn onClick={loadMoreImages} />
       )} 
       
-      {/* Додаємо компонент ImageModal */}
       {selectedImage && (
         <ImageModal 
           isOpen={modalIsOpen} 
